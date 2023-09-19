@@ -1,0 +1,28 @@
+@use '../../styles/mixins.scss' as *;
+
+header {
+  width: 100vw;
+  padding: 2.4rem;
+  @include flexCenter(row,space-between,center);
+  .header__left {
+    height: 4.0rem;
+    width: 4.0rem;
+    background-image: url(../../assets/shared/logo.svg);
+    @include image;
+  }
+  .header__right {
+    height: 4.0rem;
+    width: 4.0rem;
+    padding: 0.1rem;
+    @include flexCenter(row,flex-end,center);
+    cursor: pointer;
+    .hamburger__icon {
+      height: 2.1rem;
+      width: 2.4rem;
+      background-image: url(../../assets/shared/icon-hamburger.svg);
+      @include image;
+    }
+  }
+}
+
+
