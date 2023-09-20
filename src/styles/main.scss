@@ -18,7 +18,7 @@ body {
 }
 
 h1 {
-  font-size: 15rem;
+  font-size: 8rem;
 }
 
 h2 {
@@ -38,11 +38,14 @@ h5 {
   letter-spacing: 0.475rem;
 }
 
-nav {
+nav, .text {
   font-size: 1.6rem;
-  letter-spacing: 0.27;
+  letter-spacing: 0.27rem;
+  color:$secondary-color;
 }
 
 p {
-  font-family: $font-subheading;
+  font-family: $font-other;
+  color: $secondary-color;
+  font-size: 1.6rem;
 }
