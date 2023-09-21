@@ -64,23 +64,30 @@ main {
 }
 }
 
-// @media screen and (min-width: 1024px) {
-//   main {
-//     height: calc(100% - 16.6rem);
-//     .home__information {
-//       width: 60%;
-//       height: auto;
-//       .text {
-//         margin-top: 10.8rem;
-//         font-size: 2rem;
-//       }
-//       .home__title {
-//         font-size: 15rem;
-//         height: 45%;
-//       }
-//     }
-//     .home__image {
-//       margin-top: 12.5rem;
-//     }
-//   }
-// }
+@media screen and (min-width: 1024px) {
+  main {
+    height: calc(100% - 16.6rem);
+    @include flexCenter(row,space-around,center);
+    .home__information {
+      width: 40%;
+      height: auto;
+      .text {
+        margin-top: 10.8rem;
+        font-size: 2.8rem;
+      }
+      .home__title {
+        font-size: 15rem;
+        height: 45%;
+      }
+      .home__text{
+        text-align: start;
+        font-size: 1.8rem;
+      }
+    }
+    .home__image {
+      margin-top: 20rem;
+      height: 27.4rem;
+      width: 27.4rem;
+    }
+  }
+}
