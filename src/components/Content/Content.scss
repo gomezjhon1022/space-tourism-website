@@ -11,9 +11,12 @@ main {
     padding: 0 2.4rem;
     height: 27.6rem;
     .text {
-      width: auto;
+      width: 100%;
       margin-top: 2.4rem;
       text-align: center;
+      font-size: 1.6rem;
+      letter-spacing: 0.27rem;
+      color:$secondary-color;
     }
     .home__title {
       text-align: center;
@@ -38,4 +41,24 @@ main {
       letter-spacing: 0.25rem;
     }
   }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1724px) {
+main {
+  .home__information {
+    width: 60%;
+    height: auto;
+    .text {
+      margin-top: 10.8rem;
+      font-size: 2rem;
+    }
+    .home__title {
+      font-size: 15rem;
+      height: 45%;
+    }
+  }
+  .home__image {
+    margin-top: 12.5rem;
+  }
+}
 }
