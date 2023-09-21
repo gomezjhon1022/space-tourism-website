@@ -31,10 +31,13 @@ header {
     .header__right--desktop {
       display: none;
     }
+    // .header__center {
+    //   display: none;
+    // }
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1724px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   header {
     height: 9.6rem;
     padding: 0 2.4rem;
@@ -72,10 +75,63 @@ header {
   }
 }
 
+@media screen and (min-width: 1024px) {
+  header {
+    height: 9.6rem;
+    padding: 0 0 0  2.4rem;
 
-
-// @media screen and (min-width: 1025px) {
-//   /* Estilos para escritorio */
-// }
+    .hamburger__icon {
+      display: none;
+    }
+    .header__left {
+      margin-left: 1.5rem;
+    }
+    .header__center {
+      height: 0.1rem;
+      width: 33%;
+      border: solid #979797 1px;
+      transform: translate(6rem, 0);
+      z-index: 3;
+    }
+    .header__right {
+      height: 100%;
+      width: 60%;
+      backdrop-filter: blur(10px);
+      cursor: default;
+      .header__right--desktop {
+        width: 100%;
+        height: 100%;
+        ul{
+          height: 100%;
+          @include flexCenter(row,space-evenly,center);
+          counter-reset: section-counter -1;
+          li {
+            height: 100%;
+            cursor: pointer;
+            counter-increment: section-counter;
+            position: relative;
+            padding-left:30px;
+            a {
+              @include flexCenter(row,center,center);
+              height: 100%;
+            }
+          &:hover {
+            border-bottom: 3px #979797 solid;
+          }
+          &::before {
+            content: "0" counter(section-counter);
+            position:absolute;
+            left:0;
+            top:50%;
+            transform: translateY(-50%);
+            width: 20px;
+            text-align: right;
+          }
+          }
+        }
+      }
+    }
+  }
+}
 
 

@@ -4,6 +4,7 @@ function Header () {
   return (
     <header>
       <div className="header__left"></div>
+      <div className='header__center'></div>
       <div className="header__right">
         <div className='hamburger__icon'></div>
         <nav className='header__right--desktop'>

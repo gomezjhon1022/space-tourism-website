@@ -43,8 +43,9 @@ main {
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1724px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
 main {
+  height: calc(100% - 16.6rem);
   .home__information {
     width: 60%;
     height: auto;
@@ -62,3 +63,24 @@ main {
   }
 }
 }
+
+// @media screen and (min-width: 1024px) {
+//   main {
+//     height: calc(100% - 16.6rem);
+//     .home__information {
+//       width: 60%;
+//       height: auto;
+//       .text {
+//         margin-top: 10.8rem;
+//         font-size: 2rem;
+//       }
+//       .home__title {
+//         font-size: 15rem;
+//         height: 45%;
+//       }
+//     }
+//     .home__image {
+//       margin-top: 12.5rem;
+//     }
+//   }
+// }
