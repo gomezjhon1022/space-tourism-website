@@ -1,11 +1,11 @@
-@use './styles/mixins.scss' as *;
+@use '../styles/mixins.scss' as *;
 
 .App {
   width: 100%;
   aspect-ratio: 9 / 16;
   height: 100%;
   min-height: 100vh;
-  background-image: url(./assets/home/background-home-mobile.jpg);
+  background-image: url(../assets/home/background-home-mobile.jpg);
   @include image;
 }
 
@@ -13,14 +13,14 @@
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .App {
     aspect-ratio: 3 / 4;
-    background-image: url(./assets/home/background-home-tablet.jpg);
+    background-image: url(../assets/home/background-home-tablet.jpg);
   }
 }
 
 @media screen and (min-width: 1024px) {
   .App{
     aspect-ratio: 16 / 10;
-    background-image: url(./assets/home/background-home-desktop.jpg);
+    background-image: url(../assets/home/background-home-desktop.jpg);
     padding-top: 4rem;
   }
 }
