@@ -1,5 +1,6 @@
 @use '../../styles/mixins.scss' as *;
 @use '../../styles/main.scss' as *;
+@use '../../styles/variables.scss' as *;
 
 header {
   width: 100vw;
@@ -31,9 +32,6 @@ header {
     .header__right--desktop {
       display: none;
     }
-    // .header__center {
-    //   display: none;
-    // }
   }
 }
 
@@ -64,6 +62,7 @@ header {
             a {
               @include flexCenter(row,center,center);
               height: 100%;
+              color: $tertiary-color;
             }
           &:hover {
             border-bottom: 3px #979797 solid;
@@ -114,6 +113,7 @@ header {
             a {
               @include flexCenter(row,center,center);
               height: 100%;
+              color: $tertiary-color;
             }
           &:hover {
             border-bottom: 3px #979797 solid;

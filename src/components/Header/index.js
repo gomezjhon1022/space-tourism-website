@@ -1,25 +1,34 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { SpaceWebsiteContext } from '../SpaceWebsiteContext';
 import './Header.scss';
 
 function Header () {
+  const { menumobileisopen, setMenumobileisopen }=React.useContext(SpaceWebsiteContext);
+  const handlemenu = ()=>{
+    setMenumobileisopen(!menumobileisopen);
+    console.log(menumobileisopen)
+  }
   return (
     <header>
       <div className="header__left"></div>
       <div className='header__center'></div>
       <div className="header__right">
-        <div className='hamburger__icon'></div>
+        <div className='hamburger__icon'
+        onClick={handlemenu}></div>
         <nav className='header__right--desktop'>
           <ul>
             <li>
-              <a>HOME</a>
+              <Link to={`/`}>HOME</Link>
             </li>
             <li>
-              <a>DESTINATION</a>
+              <Link to={`/destination`} >DESTINATION</Link>
             </li>
             <li>
-              <a>CREW</a>
+              <Link to={`/crew`}>CREW</Link>
             </li>
             <li>
-              <a>TECHNOLOGY</a>
+              <Link to={`/technology`}>TECHNOLOGY</Link>
             </li>
           </ul>
         </nav>
