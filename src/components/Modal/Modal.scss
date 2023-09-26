@@ -1,0 +1,37 @@
+@use '../../styles/mixins.scss' as *;
+@use '../../styles/variables.scss' as *;
+
+.modal {
+  position: absolute;
+  height: 100%;
+  width: 67%;
+  top:0;
+  right: 0;
+  backdrop-filter: blur(15px);
+  padding: 3.4rem 0 0 3.2rem;
+  @include flexCenter(column, start, end);
+
+  .close {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 3.2rem;
+    background-image: url(../../assets/shared/icon-close.svg);
+    cursor: pointer;
+    @include image;
+  }
+  .modal--mobile {
+    width: 100%;
+    align-self: flex-start;
+    margin-top: 6.4rem;
+    li {
+      margin-bottom: 3.2rem;
+      a {
+        color: $tertiary-color;
+      }
+      &:active {
+        border-right: 3px #979797 solid;
+      }
+    }
+  }
+}
+

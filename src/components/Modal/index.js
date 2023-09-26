@@ -1,21 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { SpaceWebsiteContext } from '../SpaceWebsiteContext';
-import './Header.scss';
+import './Modal.scss';
 
-function Header () {
+function Modal() {
   const { menumobileisopen, setMenumobileisopen }=React.useContext(SpaceWebsiteContext);
-  const handlemenu = ()=>{
+  const handleModal = ()=>{
     setMenumobileisopen(!menumobileisopen);
   }
+
   return (
-    <header>
-      <div className="header__left"></div>
-      <div className='header__center'></div>
-      <div className="header__right">
-        <div className='hamburger__icon'
-        onClick={handlemenu}></div>
-        <nav className='header__right--desktop'>
+  <div className='modal'>
+        <div className='close' onClick={handleModal}></div>
+        <nav className='modal--mobile'>
           <ul>
             <li>
               <Link to={`/`}>HOME</Link>
@@ -31,9 +28,7 @@ function Header () {
             </li>
           </ul>
         </nav>
-      </div>
-    </header>
-  )
+  </div>)
 }
 
-export { Header }
+export { Modal };
