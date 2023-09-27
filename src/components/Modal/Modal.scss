@@ -23,13 +23,28 @@
     width: 100%;
     align-self: flex-start;
     margin-top: 6.4rem;
-    li {
-      margin-bottom: 3.2rem;
-      a {
-        color: $tertiary-color;
-      }
-      &:active {
-        border-right: 3px #979797 solid;
+    ul {
+      counter-reset: section-counter -1;
+      li {
+        margin-bottom: 3.2rem;
+        counter-increment: section-counter;
+        position: relative;
+        padding-left:30px;
+        a {
+          color: $tertiary-color;
+        }
+        &:active {
+          border-right: 3px #979797 solid;
+        }
+        &::before {
+          content: "0" counter(section-counter);
+          position:absolute;
+          left:0;
+          top:50%;
+          transform: translateY(-50%);
+          width: 20px;
+          text-align: right;
+        }
       }
     }
   }
