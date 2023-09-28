@@ -1,5 +1,5 @@
-import { Header } from "../components/Header";
-import moon from '../assets/destination/image-moon.png';
+import { Header } from "../../components/Header";
+import moon from '../../assets/destination/background-destination-tablet.jpg';
 import './Destination.scss';
 
 function Destination() {

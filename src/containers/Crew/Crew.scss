@@ -1,0 +1,46 @@
+@use '../../styles/variables.scss' as *;
+@use '../../styles/mixins.scss' as *;
+
+.crew__container {
+  height: calc(100% - 8.8rem);
+  width: 100%;
+  @include flexCenter(column, space-around, center);
+  .crew__title {
+    font-family: $font-subheading;
+    font-size: 1.6rem;
+  }
+  .crew__image {
+    height: 17rem;
+    width: 17rem;
+  }
+  .destionation__options {
+    width: 50%;
+    @include flexCenter(row,space-evenly, center);
+    .crew__option {
+      height: 1.5rem;
+      width: 1.5rem;
+      border-radius: 50%;
+      color: $secondary-color;
+      background-color: #979797;
+      &:hover {
+        background-color: white;
+      }
+      &:active {
+        background-color: white;
+      }
+    }
+  }
+  .crew__position {
+    font-size: 1.6rem;
+  }
+  .crew__name {
+    font-size: 2.4rem;
+  }
+
+  .crew__text {
+    width: 90%;
+    padding-bottom: 3.2rem;
+    text-align: center;
+    border-bottom: solid 0.1rem #383B4B;
+  }
+}
