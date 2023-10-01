@@ -1,0 +1,13 @@
+{
+  "crew": {
+    "captain": "John",
+    "engineer": "Bob",
+    "first_officer": "Alice"
+  },
+  "destination": "Mars",
+  "technology": {
+    "communication": "Satellite",
+    "life_support": "Oxygen system",
+    "navigation": "GPS"
+  }
+}

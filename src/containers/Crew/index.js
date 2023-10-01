@@ -5,7 +5,6 @@ import './Crew.scss';
 function Crew() {
   return (
     <>
-      <Header/>
       <div className="crew__container">
       <div className="crew__title"><span>01</span> MEET YOUR CREW</div>
       <img className="crew__image" src={crewmember}></img>

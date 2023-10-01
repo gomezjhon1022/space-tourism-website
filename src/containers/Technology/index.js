@@ -1,11 +1,9 @@
-import { Header } from "../../components/Header";
 import vehicle from '../../assets/technology/image-launch-vehicle-landscape.jpg';
 import './/Technology.scss';
 
 function Technology () {
   return (
     <>
-      <Header/>
       <div className="technology__container">
       <div className="technology__title"><span>03</span> SPACE LAUNCH 101</div>
       <img className="technology__image" src={vehicle}></img>

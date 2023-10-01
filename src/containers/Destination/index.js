@@ -1,11 +1,9 @@
-import { Header } from "../../components/Header";
 import moon from '../../assets/destination/background-destination-tablet.jpg';
 import './Destination.scss';
 
 function Destination() {
   return (
     <>
-      <Header/>
       <div className="destination__container">
       <div className="destination__title"><span>01</span> PICK YOUR DESTINATION</div>
       <img className="destination__image" src={moon}></img>

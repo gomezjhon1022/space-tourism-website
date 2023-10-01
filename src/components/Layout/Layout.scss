@@ -1,0 +1,59 @@
+@use "../../styles/mixins.scss" as *;
+@use "../../styles/variables.scss" as *;
+
+.main {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  height: 100%;
+  min-height: 100vh;
+  background-image: url("#{$homeMobileBackground}");
+  position: relative;
+  @include image;
+  &.tablet {
+    background-image: url("#{$homeTabletBackground}");
+  }
+  &.desktop {
+    background-image: url("#{$homeDesktopBackground}");
+  }
+  &.destination {
+    background-image: url("#{$destinationMobileBackground}");
+    &.tablet {
+      background-image: url("#{$destinationTabletBackground}");
+    }
+    &.desktop {
+      background-image: url("#{$destinationDesktopBackground}");
+    }
+  }
+  &.crew {
+    background-image: url("#{$crewMobileBackground}");
+    &.tablet {
+      background-image: url("#{$crewTabletBackground}");
+    }
+    &.desktop {
+      background-image: url("#{$crewDesktopBackground}");
+    }
+  }
+  &.technology {
+    background-image: url("#{$technologyMobileBackground}");
+    &.tablet {
+      background-image: url("#{$technologyTabletBackground}");
+    }
+    &.desktop {
+      background-image: url("#{$technologyDesktopBackground}");
+    }
+  }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .main {
+    aspect-ratio: 3 / 4;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .main{
+    aspect-ratio: 16 / 10;
+    padding-top: 4rem;
+  }
+}
