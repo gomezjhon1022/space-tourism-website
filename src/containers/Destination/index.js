@@ -16,7 +16,7 @@ function Destination() {
       <div className="destination__title"><span>01</span> PICK YOUR DESTINATION</div>
       <img className="destination__image" src={destinationImage}></img>
       <div className="destionation__options">
-        { data.destination.map((item=><div key={item.name} className="destionation__option" onClick={()=>handleDestination(item.name)}>{item.name}</div>))
+        { data.destination.map((item=><div key={item.name} className={`destionation__option ${item.name === destination ? 'selected':''} `} onClick={()=>handleDestination(item.name)}>{item.name}</div>))
         }
       </div>
       <h3 className="destination__name">{selectedDestination.name}</h3>

@@ -1,22 +1,28 @@
-import { Header } from "../../components/Header";
-import crewmember from '../../assets/crew/image-anousheh-ansari.png';
+import { useState } from 'react';
+import data from '../../assets/data/data.json';
 import './Crew.scss';
 
 function Crew() {
+  const [crew, setCrew] = useState("DOUGLAS HURLEY");
+  const selectedCrew = data.crew.find(item=>item.name===crew);
+  const crewImage = require(`../../assets/crew/image-${selectedCrew.image.toLowerCase()}.png`);
+
+
+  const handleCrew= (name) => {
+    setCrew(name);
+  }
   return (
     <>
       <div className="crew__container">
       <div className="crew__title"><span>01</span> MEET YOUR CREW</div>
-      <img className="crew__image" src={crewmember}></img>
+      <img className="crew__image" src={crewImage}></img>
       <div className="crew__options">
-        <div className="crew__option"></div>
-        <div className="crew__option"></div>
-        <div className="crew__option"></div>
-        <div className="crew__option"></div>
+        {data.crew.map((item=><div key={item.name} className={`crew__option ${item.name===crew? 'selected':''}`} onClick={()=>handleCrew(item.name)} ></div>))
+        }
       </div>
-      <div className="crew__position">COMMANDER</div>
-      <div className="crew__name">DOUGLAS HURLEY</div>
-      <p className="crew__text">Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2.</p>
+      <div className="crew__position">{selectedCrew.role}</div>
+      <div className="crew__name">{selectedCrew.name}</div>
+      <p className="crew__text">{selectedCrew.review}</p>
 
       </div>
     </>
