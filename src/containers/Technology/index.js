@@ -6,8 +6,6 @@ function Technology () {
   const [technology, setTechnology] = useState("LAUNCH VEHICLE");
   const selectedTechnology = data.technology.find(item=>item.topic===technology);
   const technologyImage=require(`../../assets/technology/image-${selectedTechnology.image}.jpg`)
-  console.log(selectedTechnology);
-  
   const handleTechnology= (name)=> {
     setTechnology(name)
   }

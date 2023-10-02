@@ -15,16 +15,16 @@ function Modal() {
         <nav className='modal--mobile'>
           <ul>
             <li>
-              <Link to={`/`}>HOME</Link>
+              <Link to={`/`} onClick={handleModal}>HOME</Link>
             </li>
             <li>
-              <Link to={`/destination`} >DESTINATION</Link>
+              <Link to={`/destination`} onClick={handleModal}>DESTINATION</Link>
             </li>
             <li>
-              <Link to={`/crew`}>CREW</Link>
+              <Link to={`/crew`} onClick={handleModal}>CREW</Link>
             </li>
             <li>
-              <Link to={`/technology`}>TECHNOLOGY</Link>
+              <Link to={`/technology`} onClick={handleModal}>TECHNOLOGY</Link>
             </li>
           </ul>
         </nav>

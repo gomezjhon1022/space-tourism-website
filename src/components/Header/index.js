@@ -7,6 +7,7 @@ function Header () {
   const { menumobileisopen, setMenumobileisopen }=React.useContext(SpaceWebsiteContext);
   const handlemenu = ()=>{
     setMenumobileisopen(!menumobileisopen);
+    console.log("ejecuta hamburgericon");
   }
   return (
     <header>

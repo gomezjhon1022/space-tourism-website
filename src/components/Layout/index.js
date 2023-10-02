@@ -2,8 +2,12 @@ import { useLocation } from "react-router-dom";
 import { Header } from "../Header";
 import './Layout.scss';
 import { useEffect, useState } from "react";
+import { Modal } from "../Modal";
+import React from "react";
+import { SpaceWebsiteContext } from "../SpaceWebsiteContext";
 
 function Layout ({children}) {
+  const { menumobileisopen }=React.useContext(SpaceWebsiteContext);
   const location = useLocation();
   const [deviceClass, setDeviceClass] = useState("");
 
@@ -44,6 +48,7 @@ function Layout ({children}) {
 
   return (
     <div className={`main ${deviceClass} ${routeClass}`}>
+      {!menumobileisopen&&<Modal/>}
       <Header/>
       {children}
     </div>
