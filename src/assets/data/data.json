@@ -27,7 +27,7 @@
   ],
   "destination": [
     {
-      "description": "See our planet as you've never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.",
+      "description": "See our planet as you've never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you're there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.",
       "distance_to_earth": "384,400 KM",
       "estimated_travel_time": "3 DAYS",
       "image": "../../assets/destination/image-moon.png",
@@ -55,9 +55,24 @@
       "name": "MARS"
     }
   ],
-  "technology": {
-    "communication": "Satellite",
-    "life_support": "Oxygen system",
-    "navigation": "GPS"
-  }
+  "technology": [
+    {
+      "description": "A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!",
+      "id": 1,
+      "image": "launch-vehicle-landscape",
+      "topic": "LAUNCH VEHICLE"
+    },
+    {
+      "description": "A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, by analogy to the seaport for ships or airport for aircraft. Based in the famous Cape Canaveral, our spaceport is ideally situated to take advantage of the Earth's rotation for launch.",
+      "id": 2,
+      "image": "spaceport-landscape",
+      "topic": "SPACEPORT"
+    },
+    {
+      "description": "A space capsule is an often-crewed spacecraft that uses a blunt-body reentry capsule to reenter the Earth's atmosphere without wings. Our capsule is where you'll spend your time during the flight. It includes a space gym, cinema, and plenty of other activities to keep you entertained.",
+      "id": 3,
+      "image": "space-capsule-landscape",
+      "topic": "SPACE CAPSULE"
+    }
+  ]
 }
