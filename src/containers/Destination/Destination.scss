@@ -70,3 +70,56 @@
     }
   }
 }
+
+
+@media screen and (min-width: 1024px) {
+
+  .destination__container {
+    @include flexCenter(row, center, center);
+    .destination--left {
+      width: 50%;
+      height: 100%;
+      @include flexCenter(column,space-evenly, center);
+      .destination__title {
+        font-size: 2.8rem;
+      }
+      .destination__image {
+        width: 44.5rem;
+        height: 44.5rem;
+      }
+    }
+    .destination--right {
+      width: 50%;
+      height: 75%;
+      margin-top: 10rem;
+      .destionation__options {
+        width: 60%;
+        @include flexCenter(row,flex-start, center);
+        .destionation__option {
+          margin-right: 4rem;
+        }
+      }
+      .destination__name {
+        font-size: 10rem;
+      }
+      .destionation__text {
+        width: 70%;
+        text-align: start;
+        line-height: 1.8;
+        padding: 0 0 5rem 0;
+      }
+      .container__data {
+        margin-top: 5rem;
+        @include flexCenter(row, start, center);
+        .destination__distance {
+          margin-right: 7rem;
+          @include flexCenter(column, center,start);
+        }
+        .destination__time {
+          @include flexCenter(column, center, start);
+        }
+      }
+    }
+
+  }
+}

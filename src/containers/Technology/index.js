@@ -15,7 +15,7 @@ function Technology () {
       <div className="technology__title"><span>03</span> SPACE LAUNCH 101</div>
       <img className="technology__image" src={technologyImage}></img>
       <div className="technology__options">
-        {data.technology.map((item=><div key={item.id} className={`technology__option ${item.topic===technology? 'selected':''}`} onClick={()=>handleTechnology(item.topic)}>{item.id}</div>))}
+        {data.technology.map((item=><div key={item.id} className={`technology__option ${item.topic===technology? 'selected':''}`} onClick={()=>handleTechnology(item.topic)}><span>{item.id}</span></div>))}
       </div>
       <div className="technology__position">THE TERMINOLOGY...</div>
       <div className="technology__name">{selectedTechnology.topic}</div>
