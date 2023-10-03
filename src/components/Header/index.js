@@ -1,14 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { SpaceWebsiteContext } from '../SpaceWebsiteContext';
 import './Header.scss';
 
 function Header () {
   const { menumobileisopen, setMenumobileisopen }=React.useContext(SpaceWebsiteContext);
+  const [routeSelected, setRouteSelected]=useState("/");
+
   const handlemenu = ()=>{
     setMenumobileisopen(!menumobileisopen);
-    console.log("ejecuta hamburgericon");
   }
+
+  const handleRouteSelected = (route) => {
+    setRouteSelected(route);
+    console.log(route);
+  }
+
   return (
     <header>
       <div className="header__left"></div>
@@ -18,17 +25,17 @@ function Header () {
         onClick={handlemenu}></div>
         <nav className='header__right--desktop'>
           <ul>
-            <li>
-              <Link to={`/`}>HOME</Link>
+            <li className={`${routeSelected==='/'?'selected':''}`}>
+              <Link to={`/`} onClick={()=>handleRouteSelected('/')}>HOME</Link>
             </li>
-            <li>
-              <Link to={`/destination`} >DESTINATION</Link>
+            <li className={`${routeSelected==='/destination'?'selected':''}`}>
+              <Link to={`/destination`} onClick={()=>handleRouteSelected('/destination')}>DESTINATION</Link>
             </li>
-            <li>
-              <Link to={`/crew`}>CREW</Link>
+            <li className={`${routeSelected==='/crew'?'selected':''}`}>
+              <Link to={`/crew`} onClick={()=>handleRouteSelected('/crew')}>CREW</Link>
             </li>
-            <li>
-              <Link to={`/technology`}>TECHNOLOGY</Link>
+            <li className={`${routeSelected==='/technology'?'selected':''}`}>
+              <Link to={`/technology`} onClick={()=>handleRouteSelected('/technology')}>TECHNOLOGY</Link>
             </li>
           </ul>
         </nav>
