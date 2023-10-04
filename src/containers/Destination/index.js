@@ -5,6 +5,8 @@ import './Destination.scss';
 function Destination() {
   const [destination, setDestination] = useState("MOON");
   const [isDesktop, setIsDesktop] = useState(false);
+  const selectedDestination =data.destination.find(item=>item.name === destination);
+  const destinationImage = require(`../../assets/destination/image-${selectedDestination.name.toLowerCase()}.png`);
 
   const handleResize = () => {
     setIsDesktop(window.innerWidth>=1024);
@@ -18,8 +20,7 @@ function Destination() {
     };
   }, []);
 
-  const selectedDestination =data.destination.find(item=>item.name === destination);
-  const destinationImage = require(`../../assets/destination/image-${selectedDestination.name.toLowerCase()}.png`);
+
 
   const handleDestination=(name) => {
     setDestination(name);

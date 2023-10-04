@@ -73,7 +73,47 @@
   }
 }
 
-// @media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
 
-
-// }
+  .crew__container {
+    height: calc(100% - 8.8rem);
+    width: 100%;
+    @include flexCenter(row, center, center);
+    .crew--left {
+      width: 55%;
+      height: 100%;
+      padding-left: 16.5rem;
+      @include flexCenter(column, space-evenly, start);
+      .crew__title{
+        order:1;
+        font-size: 2.8rem;
+      }
+      .crew__options{
+        order:5;
+        width: 30%;
+      }
+      .crew__position{
+        order:2;
+        font-size: 3.2rem;
+      }
+      .crew__name {
+        order:3;
+        font-size: 5.6rem;
+      }
+      .crew__text{
+        order:4;
+        font-size: 1.8rem;
+        text-align: start;
+      }
+    }
+    .crew--right {
+      width: 45%;
+      height: 100%;
+      @include flexCenter(row, center, center);
+      .crew__image {
+        height: 90%;
+        width: auto;
+      }
+    }
+  }
+}
