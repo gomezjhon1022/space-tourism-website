@@ -13,7 +13,6 @@ function Header () {
 
   const handleRouteSelected = (route) => {
     setRouteSelected(route);
-    console.log(route);
   }
 
   return (
