@@ -8,7 +8,7 @@ import { Layout } from '../components/Layout';
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <BrowserRouter basename='/space-tourism-website'>
         <Layout>
           <Routes>
               <Route path="/" element={<Home/>}></Route>
