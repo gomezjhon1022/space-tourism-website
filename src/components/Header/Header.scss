@@ -68,7 +68,7 @@ header {
             border-bottom: 3px #979797 solid;
           }
           &.selected {
-            border-bottom: 3px #979797 solid;
+            border-bottom: 3px #ffffff solid;
           }
           }
         }
@@ -129,7 +129,7 @@ header {
             border-bottom: 3px #979797 solid;
           }
           &.selected {
-            border-bottom: 3px #979797 solid;
+            border-bottom: 3px #ffffff solid;
           }
           &::before {
             content: "0" counter(section-counter);

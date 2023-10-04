@@ -25,7 +25,7 @@
       cursor: pointer;
       @include flexCenter(row, center, center);
       &:hover {
-        background-color: white;
+        background-color: #979797;
         color:#0B0D17;
       }
       &.selected {
