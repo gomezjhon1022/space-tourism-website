@@ -4,6 +4,7 @@ import { Destination } from '../containers/Destination/index';
 import { Crew } from '../containers/Crew/index';
 import { Technology } from '../containers/Technology';
 import { Layout } from '../components/Layout';
+import './App.scss';
 
 function App() {
   return (
