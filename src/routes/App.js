@@ -4,6 +4,7 @@ import { Destination } from '../containers/Destination/index';
 import { Crew } from '../containers/Crew/index';
 import { Technology } from '../containers/Technology';
 import { Layout } from '../components/Layout';
+import { NotFound } from '../containers/NotFound';
 import './App.scss';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
               <Route path="/destination" element={<Destination/>}></Route>
               <Route path="/crew" element={<Crew/>}></Route>
               <Route path="/technology" element={<Technology/>}></Route>
+              <Route path="*" element={<NotFound/>}></Route>
           </Routes>
         </Layout>
       </BrowserRouter>

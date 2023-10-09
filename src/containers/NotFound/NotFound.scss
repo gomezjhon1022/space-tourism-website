@@ -1,0 +1,9 @@
+@use "../../styles/mixins.scss" as *;
+
+.notFound {
+  height: 100%;
+  width: 100%;
+  font-size: 8rem;
+  @include flexCenter(row, center, center);
+
+}
