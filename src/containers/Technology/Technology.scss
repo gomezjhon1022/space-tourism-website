@@ -2,7 +2,7 @@
 @use '../../styles/mixins.scss' as *;
 
 .technology__container {
-  height: calc(100% - 8.8rem);
+  height: calc(100% - 9.6rem);
   width: 100%;
   @include flexCenter(column, space-around, center);
   .technology__title {
@@ -69,20 +69,20 @@
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) and (max-width: 1269px) {
   .technology__container {
     @include flexCenter(row, center, center);
     .technology--left{
-      width: 60%;
+      width: 65%;
       height: 100%;
-      padding:5rem 0 0 20vh;
+      padding:5vh 0 0 10vh;
       @include flexCenter(column, start,start);
       .technology__title {
         font-size: 2.8rem;
       }
       .technology__container--desktop {
-        margin-top: 6rem;
-        height: 50%;
+        margin-top: 6vh;
+        height: 50vh;
         @include flexCenter(row,center,center);
         .technology__options {
           height: 100%;
@@ -104,6 +104,61 @@
             padding-bottom: 0;
             text-align: start;
             line-height: 1.5;
+          }
+        }
+      }
+    }
+    .technology--right{
+      width: 35%;
+      height: 100%;
+      @include flexCenter(row, end, center);
+      .technology__image {
+        height: 65%;
+        width: auto;
+        @include image;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1070px) {
+  .technology__container {
+    @include flexCenter(row, center, center);
+    .technology--left{
+      width: 60%;
+      height: 100%;
+      padding:5rem 0 0 17vh;
+      @include flexCenter(column, start,start);
+      .technology__title {
+        font-size: 2.8rem;
+      }
+      .technology__container--desktop {
+        margin-top: 10vh;
+        height: 45vh;
+        @include flexCenter(row,center,center);
+        .technology__options {
+          height: 100%;
+          @include flexCenter(column,space-between,center);
+          .technology__option {
+            height: 8rem;
+            width: 8rem;
+          }
+        }
+        .information__container {
+          height: 100%;
+          padding-left: 4rem;
+          width: 240%;
+          .technology__name {
+            font-size: 5.6rem;
+            margin-top: 3.5vh;
+          }
+          .technology__text {
+            font-size: 1.8rem;
+            margin-top: 3rem;
+            padding-bottom: 0;
+            text-align: start;
+            line-height: 1.5;
+            width: 100%;
           }
         }
       }
